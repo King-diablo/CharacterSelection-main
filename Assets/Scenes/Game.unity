@@ -167,9 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a82bdda6fc979409c3379af98d1a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tank: {fileID: 7541813574053346982, guid: 75259bdf7d189b9498eb66ab814c08b1, type: 3}
-  useKey: 0
-  keyCode: 32
+  tank: {fileID: -4527961959379809830, guid: 75259bdf7d189b9498eb66ab814c08b1, type: 3}
 --- !u!1 &1179543937
 GameObject:
   m_ObjectHideFlags: 0
