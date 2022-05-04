@@ -13,6 +13,8 @@ public class TankController
         tankView = GameObject.Instantiate<TankView>(_tankView);
         rb = tankView.GetRigidbody();
 
+        tankView.SetColor(tankModel.color);
+
         tankModel.SetTankController(this);
         tankView.SetTankController(this);
 

@@ -301,8 +301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4492324586775110197}
-  moveSpeed: 100
-  rotationSpeed: 20
+  tankRenderer:
+  - {fileID: 7541813574051144150}
+  - {fileID: 7541813574051144144}
+  - {fileID: 7541813574051144158}
+  - {fileID: 7541813574051144148}
 --- !u!54 &4492324586775110197
 Rigidbody:
   m_ObjectHideFlags: 0
