@@ -1,2 +1,2 @@
 # CharacterSelection
-This is the project which demonstrates how character selection works in actual games.
+This is the project which MVC to create an actual games.
