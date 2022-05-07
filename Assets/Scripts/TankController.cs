@@ -25,6 +25,11 @@ public class TankController
         rb.velocity = tankView.transform.forward * moveInput * moveSpeed * Time.deltaTime;
     }
 
+    public GameObject FireBullet(GameObject bullet, Vector3 direction)
+    {
+        return GameObject.Instantiate(bullet, direction, Quaternion.identity);
+    }
+
     public void HandleRotation(float rotationInput, float rotationSpeed)
     {
         Vector3 rotationVector = new Vector3(0.0f, rotationInput * rotationSpeed, 0.0f);

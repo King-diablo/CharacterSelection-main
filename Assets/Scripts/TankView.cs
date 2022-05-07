@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class TankView : MonoBehaviour
 {
     private TankController tankController;
     [SerializeField] Rigidbody rb;
+    [SerializeField] Transform firePoint;
+    [SerializeField] GameObject bullet;
     [SerializeField] MeshRenderer[] tankRenderer;
 
     private float horizontalValue;
@@ -26,11 +29,21 @@ public class TankView : MonoBehaviour
     void Update()
     {
         HandleMovementInput();
+        HandleShooting();
 
         if (horizontalValue != 0) tankController.HandleForwardMovement(horizontalValue, tankModel.moveSpeed);
 
         if(rotationValue != 0) tankController.HandleRotation(rotationValue, tankModel.rotationSpeed);
     }
+
+    private void HandleShooting()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            GameObject go = tankController.FireBullet(bullet, firePoint.position);
+        }
+    }
+
     public void SetTankController(TankController _tankController)
     {
         tankController = _tankController;
