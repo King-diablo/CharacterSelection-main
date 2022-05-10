@@ -35,6 +35,7 @@ public class TankController
         Vector3 rotationVector = new Vector3(0.0f, rotationInput * rotationSpeed, 0.0f);
         Quaternion newRotation = Quaternion.Euler(rotationVector * Time.deltaTime);
         rb.MoveRotation(rb.rotation * newRotation);
+        tankView.SetRotation(newRotation);
     }
 
     public TankModel GetTankModel()

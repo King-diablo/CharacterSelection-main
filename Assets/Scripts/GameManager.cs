@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
         {
             lobbyUI.SetActive(!isMenuActive);
         }
-        Debug.Log($"Saved Data: {SaveData.Instance.SaveValue()}");
-        Debug.Log($"GameData: {isMenuActive}");
     }
 
     void Update()

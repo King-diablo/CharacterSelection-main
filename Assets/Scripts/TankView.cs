@@ -8,11 +8,12 @@ public class TankView : MonoBehaviour
     private TankController tankController;
     [SerializeField] Rigidbody rb;
     [SerializeField] Transform firePoint;
-    [SerializeField] GameObject bullet;
+    [SerializeField] Bullet bulletManager;
     [SerializeField] MeshRenderer[] tankRenderer;
 
     private float horizontalValue;
     private float rotationValue;
+    private Quaternion rotValue;
 
     private GameObject cam;
     private TankModel tankModel;
@@ -40,7 +41,7 @@ public class TankView : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            GameObject go = tankController.FireBullet(bullet, firePoint.position);
+            GameObject go = tankController.FireBullet(bulletManager.bullet, firePoint.position);
         }
     }
 
@@ -66,5 +67,15 @@ public class TankView : MonoBehaviour
         {
             tankRenderer[i].material = _color;
         }
+    }
+
+    public void SetRotation(Quaternion value)
+    {
+        rotValue = value;
+    }
+
+    public Quaternion GetRotation()
+    {
+        return rotValue;
     }
 }

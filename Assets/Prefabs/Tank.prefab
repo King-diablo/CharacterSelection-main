@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4492324586775110197}
   firePoint: {fileID: 394096710518556974}
-  bullet: {fileID: 6011484370182708768, guid: 9d6e3d4408015854482fe5aded4f6f75, type: 3}
+  bulletManager: {fileID: 11400000, guid: 6157e660871f1874b930318bfc66037d, type: 2}
   tankRenderer:
   - {fileID: 7541813574051144150}
   - {fileID: 7541813574051144144}
